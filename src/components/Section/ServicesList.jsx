@@ -1,10 +1,27 @@
-import Icon from '../UI/Icon';
+import { useEffect, useState } from 'react';
+
 import ServicesCard from './ServiceCard';
 
-export default function ServisesList({ title, subtitle, icon }) {
+export default function ServicesCardServisesList() {
+  const [data, setData] = useState([]);
+
+  async function getServices() {
+    const resp = await fetch('data/services.json');
+    const dataInJs = await resp.json();
+    setData(dataInJs);
+  }
+
+  useEffect(() => {
+    getServices();
+  }, []);
+
   return (
     <div className='grid'>
-      <ServicesCard title={title} subtitle={subtitle} icon={icon} />
+      {data.map((card) => {
+        return (
+          <ServicesCard key={card.id} title={card.title} subtitle={card.summary} icon={card.icon} />
+        );
+      })}
     </div>
   );
 }
