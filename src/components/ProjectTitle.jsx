@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export default function ProjectTitle() {
+export default function ProjectTitle(props) {
   const [buttonText, setButtonText] = useState('Down right');
 
   function changeText() {
@@ -8,9 +8,17 @@ export default function ProjectTitle() {
   }
 
   return (
-    <div>
+    <div className='titleSection'>
       <h1>Projects</h1>
-      <button onClick={changeText}> {buttonText}</button>
+      <button
+        className='btn'
+        onClick={() => {
+          changeText();
+          props.ats(buttonText);
+        }}
+      >
+        {buttonText}
+      </button>
     </div>
   );
 }

@@ -1,0 +1,54 @@
+.container {
+  width: 900px;
+  margin: 0 auto;
+}
+.titleSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cardList {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.card {
+  position: relative;
+}
+.blackDiv {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 14px;
+  background-color: black;
+  color: white;
+  padding: 6px 24px;
+}
+.downBlackDiv {
+  position: absolute;
+  bottom: 4px;
+  right: 0px;
+  font-size: 14px;
+  background-color: black;
+  color: white;
+  padding: 6px 24px;
+}
+.blackDiv p {
+  margin: 0;
+}
+.downBlackDiv p {
+  margin: 0;
+}
+.img {
+  width: 100%;
+  height: auto;
+}
+.btn {
+  border: none;
+  font-size: 14px;
+  background-color: black;
+  color: white;
+  padding: 6px 24px;
+}
