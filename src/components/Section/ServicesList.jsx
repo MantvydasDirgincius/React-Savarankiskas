@@ -1,12 +1,10 @@
 import Icon from '../UI/Icon';
 import ServicesCard from './ServiceCard';
 
-export default function ServisesList() {
+export default function ServisesList({ title, subtitle, icon }) {
   return (
     <div className='grid'>
-      <ServicesCard title='Service' subtitle='lkskdnfkvnefjnvesld'>
-        <Icon icon='fa-address-book' />
-      </ServicesCard>
+      <ServicesCard title={title} subtitle={subtitle} icon={icon} />
     </div>
   );
 }
