@@ -1,18 +1,96 @@
+.container {
+  width: 900px;
+  margin: 0 auto;
+}
+
+.sectionTitle {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.sectionTitle h1 {
+  margin-bottom: 15px;
+  color: orangered;
+}
+.sectionTitle p {
+  margin: 0;
+  color: lightslategray;
+}
+
 .formGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 15px;
+  gap: 30px;
 }
 
 .form {
   max-width: 500px;
+  padding: 30px;
 }
 
 label {
   display: block;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: lightslategrey;
 }
-
+input,
+textarea {
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid rgb(203, 203, 203);
+}
+textarea {
+  height: 100px;
+}
 .mainGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
+}
+.success {
+  text-align: center;
+  color: lightslategrey;
+}
+.btn {
+  background-color: orangered;
+  padding: 10px 20px;
+  border: none;
+  color: snow;
+  font-size: medium;
+}
+
+.aside {
+  padding: 20px;
+}
+.contactTitle {
+  font-size: 15px;
+  margin: 0;
+  margin-bottom: 5px;
+}
+.contactSubtitle {
+  margin: 0;
+  font-size: 14px;
+  margin-bottom: 15px;
+  color: lightslategray;
+}
+.orange {
+  color: orangered;
+}
+.moreInfo {
+  padding: 10px 20px 20px;
+}
+.moreInfoTitle {
+  font-weight: 500;
+  font: small-caption;
+  font-size: 15px;
+  margin: 0;
+  margin-bottom: 5px;
+}
+.moreInfoSubtitle {
+  max-width: 60%;
+  margin: 0;
+  font-size: 14px;
+  margin-bottom: 15px;
+  color: lightslategray;
 }

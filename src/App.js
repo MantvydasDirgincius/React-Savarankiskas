@@ -6,7 +6,7 @@ import SectionTitle from './components/SectionTitle/SectionTitle';
 
 function App() {
   return (
-    <div className='App'>
+    <div className='App container'>
       <SectionTitle />
       <div className='mainGrid'>
         <Form />

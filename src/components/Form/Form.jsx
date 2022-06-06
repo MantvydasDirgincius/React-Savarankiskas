@@ -94,15 +94,15 @@ export default function Form() {
         onChange={(event) => inputHandler(event, setMessage)}
         name='message'
         id='message'
-        cols='30'
+        cols='20'
         rows='10'
       ></textarea>{' '}
       <br />
       <Button text='Send Message' />
     </form>
   ) : (
-    <div>
-      <p>Gavome jusu uzklausa, netrukus susisieksime</p>
+    <div className='success'>
+      <p>Gavome jusu uzklausa, netrukus susisieksime.</p>
     </div>
   );
 }
