@@ -4,10 +4,51 @@
 }
 .sectionTitle {
   text-align: center;
+  margin-bottom: 30px;
 }
 .title {
   margin-bottom: 0;
+  color: rgb(255, 121, 4);
 }
 .subtitle {
   margin: 0;
+  color: lightslategray;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+.grid2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.card {
+  display: flex;
+  gap: 10px;
+}
+.icon {
+  color: rgb(255, 121, 4);
+  font-size: 40px;
+}
+
+.cardTitle {
+  margin: 0;
+  font-size: large;
+  font-weight: 500;
+}
+.cardSubtitle {
+  color: lightslategray;
+}
+.learnMore {
+  color: rgb(255, 121, 4);
+  text-decoration: none;
+}
+.btn {
+  background-color: rgb(255, 121, 4);
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  margin-bottom: 20px;
 }

@@ -7,7 +7,9 @@ export default function ServicesCard({ title, subtitle, icon }) {
       <div className='cardInfo'>
         <h4 className='cardTitle'>{title}</h4>
         <p className='cardSubtitle'>{subtitle}</p>
-        <a href='#'>Learn more</a>
+        <a href='#' className='learnMore'>
+          Learn more
+        </a>
       </div>
     </div>
   );

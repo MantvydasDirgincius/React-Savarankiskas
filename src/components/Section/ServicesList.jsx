@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 
 import ServicesCard from './ServiceCard';
 
-export default function ServicesCardServisesList() {
+export default function ServicesCardServisesList({ classGrid }) {
   const [data, setData] = useState([]);
 
   async function getServices() {
@@ -16,7 +16,7 @@ export default function ServicesCardServisesList() {
   }, []);
 
   return (
-    <div className='grid'>
+    <div className={classGrid}>
       {data.map((card) => {
         return (
           <ServicesCard key={card.id} title={card.title} subtitle={card.summary} icon={card.icon} />
