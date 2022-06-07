@@ -1,4 +1,4 @@
-export default function SectionTitle({ title, subtitle }) {
+export default function SectionTitle() {
   return (
     <div className='sectionTitle'>
       <h1>CONTACT US</h1>
