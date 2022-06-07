@@ -8,6 +8,7 @@ export default function Form() {
   const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
   const [registration, setRegistration] = useState(null);
+  const [darkMode, setDarkMode] = useState(false);
 
   function inputHandler(event, setState) {
     setState(event.target.value);
@@ -45,61 +46,70 @@ export default function Form() {
     inputClearHandler();
   }
 
+  function dark() {
+    setDarkMode(!darkMode);
+  }
+
   return registration === null ? (
-    <form className='form' onSubmit={formHandler}>
-      <div className='formGrid'>
-        <div>
-          <label htmlFor='name'>First Name</label>
-          <input
-            value={firstName}
-            onChange={(event) => inputHandler(event, setFirstName)}
-            type='text'
-            name='name'
-            id='name'
-          />
+    <div>
+      <button onClick={dark} className='btns'>
+        Dark Mode
+      </button>
+      <form className={`form ${darkMode === true ? 'dark' : ''}`} onSubmit={formHandler}>
+        <div className='formGrid'>
+          <div>
+            <label htmlFor='name'>First Name</label>
+            <input
+              value={firstName}
+              onChange={(event) => inputHandler(event, setFirstName)}
+              type='text'
+              name='name'
+              id='name'
+            />
+          </div>
+          <div>
+            <label htmlFor='lastname'>Last Name</label>
+            <input
+              value={lastName}
+              onChange={(event) => inputHandler(event, setLastName)}
+              type='text'
+              name='lastname'
+              id='lastname'
+            />{' '}
+            <br />
+          </div>
         </div>
-        <div>
-          <label htmlFor='lastname'>Last Name</label>
-          <input
-            value={lastName}
-            onChange={(event) => inputHandler(event, setLastName)}
-            type='text'
-            name='lastname'
-            id='lastname'
-          />{' '}
-          <br />
-        </div>
-      </div>
-      <label htmlFor='email'>Email</label>
-      <input
-        value={email}
-        onChange={(event) => inputHandler(event, setEmail)}
-        type='text'
-        name='email'
-        id='email'
-      />{' '}
-      <br />
-      <label htmlFor='subject'>Subject</label>
-      <input
-        value={subject}
-        onChange={(event) => inputHandler(event, setSubject)}
-        type='text'
-        name='subject'
-        id='subject'
-      />{' '}
-      <br />
-      <label htmlFor='message'>Message</label>
-      <textarea
-        value={message}
-        onChange={(event) => inputHandler(event, setMessage)}
-        name='message'
-        id='message'
-        cols='20'
-        rows='10'
-      ></textarea>{' '}
-      <br />
-      <Button text='Send Message' />
-    </form>
+        <label htmlFor='email'>Email</label>
+        <input
+          value={email}
+          onChange={(event) => inputHandler(event, setEmail)}
+          type='text'
+          name='email'
+          id='email'
+        />{' '}
+        <br />
+        <label htmlFor='subject'>Subject</label>
+        <input
+          value={subject}
+          onChange={(event) => inputHandler(event, setSubject)}
+          type='text'
+          name='subject'
+          id='subject'
+        />{' '}
+        <br />
+        <label htmlFor='message'>Message</label>
+        <textarea
+          value={message}
+          onChange={(event) => inputHandler(event, setMessage)}
+          name='message'
+          id='message'
+          cols='20'
+          rows='10'
+        ></textarea>{' '}
+        <br />
+        <Button text='Send Message' />
+      </form>
+    </div>
   ) : (
     <div className='success'>
       <p>Gavome jusu uzklausa, netrukus susisieksime.</p>
